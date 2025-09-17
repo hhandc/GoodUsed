@@ -6,12 +6,16 @@ from datetime import datetime
 
 
 from .adapters.carrot import CarrotAdapter
-from .adapters.joonggonara import JoonggoNaraAdapter
+from .adapters.joongna import JoongnaAdapter
 from .adapters.bungae import BungaeAdapter
+
 from .dedupe import dedupe
 from .rating import score_item
 from .pricing import fair_price
 from .models import SearchResponse, Cluster
+
+
+ADAPTERS = [CarrotAdapter(), JoongnaAdapter(), BungaeAdapter()]
 
 
 app = FastAPI(title="UsedGoods Value Finder API", version="0.1.0")
